@@ -20,7 +20,7 @@ const ResetPassword = () => {
                                 Onayla
                             </button>
                             <div className='flex justify-center items-center'>
-                                <button className='rounded-full border p-2' onClick={() => router(-1)} >
+                                <button type='button' className='rounded-full border p-2' onClick={() => router(-1)} >
                                     <img src="/assets/svg/arrow-left.svg" width={25} alt=""/>
                                 </button>
                             </div>

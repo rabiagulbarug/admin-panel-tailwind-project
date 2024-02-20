@@ -1,18 +1,16 @@
 import React, {useState} from "react";
 
-const Sidebar = () => {
-    const [showSidebar, setShowSidebar] = useState(false);
+interface SidebarProps {
+    showSidebar: boolean;
+    toggleSidebar: () => void;
+}
 
-    const toggleSidebar = () => {
-        setShowSidebar(!showSidebar);
-    };
+const Sidebar = ({ showSidebar, toggleSidebar }: SidebarProps) => {
 
     return (
         <div className="flex h-screen bg-gray-100">
             <div className={`fixed inset-y-0 left-0 w-64 bg-orange-200 transition-transform duration-300 transform ${
-                    showSidebar ? "translate-x-0" : "-translate-x-full"
-                }`}
-            >
+                    showSidebar ? "translate-x-0" : "-translate-x-full"}`}>
                 <div className="p-5">
                     <h1 className="text-white text-lg font-bold">Sidebar Content</h1>
                 </div>
@@ -27,7 +25,7 @@ const Sidebar = () => {
 
             </div>
             {showSidebar && (
-                <div className="fixed inset-0 bg-black opacity-50 cursor-pointer" onClick={toggleSidebar}
+                <div className="fixed inset-0 opacity-10 cursor-pointer" onClick={toggleSidebar}
                 ></div>
             )}
         </div>

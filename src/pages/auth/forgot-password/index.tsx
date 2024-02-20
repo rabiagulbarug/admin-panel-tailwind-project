@@ -1,7 +1,7 @@
 import {useNavigate} from "react-router-dom";
 
 const ForgotPassword = () => {
-    const router = useNavigate()
+    const navigate = useNavigate()
     return (
         <div className='flex h-screen justify-center items-center '>
             <div className='border rounded-lg h-7/12 xl:w-1/4 lg:w-2/4 sm:w-3/4 md:w-3/4'>
@@ -20,7 +20,7 @@ const ForgotPassword = () => {
                                 Onay Kodu Gönder
                             </button>
                             <div className='flex justify-center items-center'>
-                                <button className='rounded-full border p-2' onClick={() => router(-1)} >
+                                <button type='button' className='rounded-full border p-2'  onClick={() => navigate(-1)}>
                                     <img src="/assets/svg/arrow-left.svg" width={25} alt=""/>
                                 </button>
                             </div>
