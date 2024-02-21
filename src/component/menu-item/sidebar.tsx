@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 
 interface SidebarProps {
     showSidebar: boolean;
@@ -16,10 +16,10 @@ const Sidebar = ({ showSidebar, toggleSidebar }: SidebarProps) => {
                 </div>
             </div>
 
-            <div className="flex-1 overflow-x-hidden overflow-y-auto p-4">
+            <div className="flex-1 overflow-x-hidden overflow-y-auto p-4" onClick={toggleSidebar}>
                 <button className={`fixed top-1 text-white ${
                     showSidebar ? "left-1" : "left-1"
-                }`} onClick={toggleSidebar}>
+                }`}>
                     <img src="/assets/svg/menu.svg" width={20}  alt=""/>
                 </button>
 
